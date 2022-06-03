@@ -1,0 +1,196 @@
+.page-dashboard {
+    #page-content-wrapper {
+        min-width: 100vw;
+        background-color: rgb(235, 235, 235);
+        .navbar-store {
+            background-color: rgb(238, 95, 95) !important;
+        }
+
+        .navbar-store.scrolled {
+            background-color: white !important;
+            -webkit-transition: 0.2s linear;
+            transition: 0.2s linear;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.287);
+        }
+    }
+    .sidebar-wrapper {
+        min-height: 100vh;
+        width: 15%;
+        margin-top: 60px;
+        margin-left: -15rem;
+        transition: margin 0.3s ease-in-out;
+        z-index: 100;
+        background-color: #fff;
+
+        @include media-breakpoint-down(sm) {
+            position: fixed;
+            left: 0;
+        }
+    }
+    .sidebar-heading {
+        padding: 30px 15px;
+        img {
+            max-width: 200px;
+        }
+    }
+    .list-group {
+        .list-group-item {
+            border: 0;
+            color: #c5c5c5;
+            text-decoration: none;
+
+            &.active {
+                background: linear-gradient(
+                    270deg,
+                    rgba(209, 83, 61, 0.52) 2%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+                border-right: 4px solid #dd4141;
+                color: #0c0d36;
+            }
+        }
+    }
+
+    #wrapper {
+        &.active-sidebar {
+            .sidebar-wrapper {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .section-content {
+        margin-top: 100px;
+
+        .dashboard-title {
+            font-weight: normal;
+            font-size: 24px;
+            color: #0c0d36;
+        }
+        .dashboard-subtitle {
+            font-weight: 300;
+            font-size: 16px;
+            color: #9191a9;
+        }
+
+        .recent-transaction {
+            .title-recent {
+                font-weight: 500;
+                font-size: 18px;
+                color: #0c0d36;
+            }
+            .img-box {
+                max-width: 100px;
+                border-radius: 6px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+            .detail {
+                font-weight: normal;
+                font-size: 18px;
+                color: #0c0d36;
+            }
+        }
+
+        .btn-delete-detail {
+            right: 15px;
+            top: -5px;
+            background-color: yellow;
+        }
+
+        .nav-bread {
+            .breadcrumb-item {
+                a {
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .img-transaction-detail {
+            border-radius: 20px;
+        }
+
+        .label-detail {
+            font-size: 18px;
+            color: #c5c5c5;
+        }
+
+        .text-detail {
+            font-size: 20px;
+            color: #0c0d36;
+
+            &.status {
+                font-size: 15px;
+            }
+        }
+        .nav-pills {
+            .nav-link {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 27px;
+                color: #9191a9;
+                padding: 6px 0;
+
+                &.active {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #0c0d36;
+                    background: none;
+                    border-bottom: 3px solid #850b15;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .sidebar-wrapper {
+            margin-left: 0;
+            margin-top: 0px;
+        }
+
+        #page-content-wrapper {
+            min-width: 0;
+            width: 100%;
+            .navbar-store {
+                background-color: transparent !important;
+            }
+        }
+        .sidebar-heading {
+            padding: 30px 15px;
+            img {
+                max-width: 250px;
+            }
+        }
+        .section-content {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .product-dashboard-thumbnail {
+            width: 100%;
+            height: 210px;
+
+            .product-dashboard-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .dashboard-detail-thumbnail {
+            width: 100%;
+            height: 280px;
+
+            .dashboard-detail-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
